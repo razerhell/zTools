@@ -1,11 +1,11 @@
-#ifndef ZUTILS_H
+ï»¿#ifndef ZUTILS_H
 #define ZUTILS_H
 
 #include <iostream>
 #include <vector>
 #include <fstream>
 
-// ½»»»±äÁ¿
+// äº¤æ¢å˜é‡
 template <typename T>
 void zSwap(T &a, T &b)
 {
@@ -14,7 +14,7 @@ void zSwap(T &a, T &b)
 	b = temp;
 }
 
-// ·ÖÅä1Î¬Êı×é
+// åˆ†é…1ç»´æ•°ç»„
 template <typename T>
 T * zAlloc(T *&p, int n1)
 {
@@ -22,7 +22,7 @@ T * zAlloc(T *&p, int n1)
 	return p;
 }
 
-// ÊÍ·Å1Î¬Êı×é
+// é‡Šæ”¾1ç»´æ•°ç»„
 template <typename T>
 void zFree1(T *&p)
 {
@@ -30,21 +30,21 @@ void zFree1(T *&p)
 	p = NULL;
 }
 
-// Îª1Î¬Êı×éÌî³äÖ¸¶¨ÊıÖµ
+// ä¸º1ç»´æ•°ç»„å¡«å……æŒ‡å®šæ•°å€¼
 template <typename T>
 void zMemset1(T * &p, const T&v, int n1)
 {
 	for (int i = 0; i < n1; ++i) p[i] = v;
 }
 
-// 1Î¬Êı×é¿½±´
+// 1ç»´æ•°ç»„æ‹·è´
 template <typename T>
 void zMemcpy1(T *&dst, const T *&src, int n1)
 {
 	for (int i = 0; i < n1; ++i) dst[i] = src[i];
 }
 
-// ·ÖÅä2Î¬Êı×é
+// åˆ†é…2ç»´æ•°ç»„
 template <typename T>
 T ** zAlloc2(T **&p, int n2, int n1)
 {
@@ -67,7 +67,7 @@ T ** zAlloc2(T **&p, int n2, int n1)
 	return p;
 }
 
-// ÊÍ·Å2Î¬Êı×é
+// é‡Šæ”¾2ç»´æ•°ç»„
 template <typename T>
 void zFree2(T **&p)
 {
@@ -76,7 +76,7 @@ void zFree2(T **&p)
 	p = NULL;
 }
 
-// 2Î¬Êı×éÌî³äÖ¸¶¨ÊıÖµ
+// 2ç»´æ•°ç»„å¡«å……æŒ‡å®šæ•°å€¼
 template <typename T>
 void zMemset2(T **&p, const const T &v, int n2, int n1)
 {
@@ -87,7 +87,7 @@ void zMemset2(T **&p, const const T &v, int n2, int n1)
 			p[i][j] = v;
 }
 
-// 2Î¬Êı×é¿½±´
+// 2ç»´æ•°ç»„æ‹·è´
 template <typename T>
 void zMemcpy(T **&dst, const T **&src, int n2, int n1)
 {
@@ -97,7 +97,7 @@ void zMemcpy(T **&dst, const T **&src, int n2, int n1)
 			dst[i][j] = src[i][j];
 }
 
-// ·ÖÅä3Î¬Êı×é
+// åˆ†é…3ç»´æ•°ç»„
 template <typename T>
 T*** zAlloc3(T ***&p, int n3, int n2, int n1)
 {
@@ -132,7 +132,7 @@ T*** zAlloc3(T ***&p, int n3, int n2, int n1)
 	return p;
 }
 
-// ÊÍ·Å3Î¬Êı×é
+// é‡Šæ”¾3ç»´æ•°ç»„
 template <typename T>
 void zFree3(T ***& p)
 {
@@ -142,7 +142,7 @@ void zFree3(T ***& p)
 	p = NULL;
 }
 
-// 3Î¬Êı×éÌî³äÖ¸¶¨ÊıÖµ
+// 3ç»´æ•°ç»„å¡«å……æŒ‡å®šæ•°å€¼
 template <typename T>
 void zMemset3(T ***& p, const T & v, int n3, int n2, int n1)
 {
@@ -154,7 +154,7 @@ void zMemset3(T ***& p, const T & v, int n3, int n2, int n1)
 				p[i][j][k] = v;
 }
 
-// 3Î¬Êı×é¿½±´
+// 3ç»´æ•°ç»„æ‹·è´
 template <typename T>
 void zMemcpy3(T ***& dst, const T ***& src, int n3, int n2, int n1)
 {
